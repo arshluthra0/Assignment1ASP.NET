@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - Flare eyeware</title>
+	<link rel="stylesheet" href="~/lib/bulma/css/bulma.css" />
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="~/css/site.css" />
+	 @if (TempData["Error"] != null)
+    {
+        <script type="text/javascript">
+            window.onload = function () {
+                alert("@TempData["Error"]");
+            };
+        </script>
+    }
+
+</head>
+<body>
+	<header>
+		<div>
+			<div class="columns p-0 m-0 has-background-black-ter" style="background-color:red">
+				<div class="column is-narrow p-3 is-align-self-center">
+					<a style="display: inline-block;" class="is-size-4 has-text-primary-light" asp-controller="Catalogue" asp-action="Index">Flare eyeware</a>
+				</div>
+				<div class="column is-align-self-center ml-3 is-narrow">
+					<a class="has-text-primary-light is-size-5" asp-controller="Catalogue" asp-action="Index">Catalogue</a>
+				</div>
+				<div class="column is-align-self-center ml-1 is-narrow">
+					<a class="has-text-primary-light is-size-5"  asp-controller="About" asp-action="Index">About Us</a>
+				</div>
+				<div class="column has-text-right is-align-self-center mr-3">
+
+					<span class="has-text-primary-light is-block">@ViewBag.User</span>
+					<a asp-controller="Login" asp-action="Logout">Logout</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<main role="main" class="p-3 mb-5">
+			@RenderBody()
+		</main>
+	</div>
+	<footer>
+		<div style="width:100%; position:fixed; bottom:0" class="p-1 has-background-grey-light">
+			<span class="ml-3 is-block">Designs by Arsh Luthra</span>
+		</div>
+	</footer>
+</body>
+</html>

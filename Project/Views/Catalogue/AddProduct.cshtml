@@ -1,0 +1,62 @@
+﻿@model ProductModel
+@{
+	ViewData["Title"] = "New Product";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="is-size-5 mb-5">Add New Product</h1>
+
+<form asp-action="AddProduct" method="post">
+	<div class="columns">
+		<div class="column">
+			<label>Product Catagory</label>
+			<input asp-for="ProductCategory" maxlength="50" type="text" class="input" placeholder="Product Catagory" />
+			<span asp-validation-for="ProductCategory" class="has-text-danger"></span>  
+		</div>
+		<div class="column">
+			<label>Product Type</label>
+			<input asp-for="ProductType" maxlength="50" type="text" class="input" placeholder="Product Type" />
+			<span asp-validation-for="ProductType" class="has-text-danger"></span>  
+		</div>
+	</div>
+	<div class="columns">
+		<div class="column">
+			<label>Product Name</label>
+			<input asp-for="ProductName" maxlength="50" type="text" class="input" placeholder="Product Name" />
+			<span asp-validation-for="ProductName" class="has-text-danger"></span>  
+		</div>
+		<div class="column">
+			<label>Product Description</label>
+			<input asp-for="ProductDescription" maxlength="250" type="text" class="input" placeholder="Product Description">
+			<span asp-validation-for="ProductDescription" class="has-text-danger"></span>  
+		</div>
+	</div>
+	<div class="columns">
+		<div class="column">
+			<label>Product Price</label>
+			<input asp-for="ProductPrice" maxlength="10" type="number" class="input" placeholder="Product Price" />
+		</div>
+		<div class="column">
+			<label>Product Volume</label>
+			<input asp-for="ProductVolume" maxlength="10" type="number" class="input" placeholder="Product Volume">
+		</div>
+	</div>
+	<div class="columns">
+		<div class="column">
+			<label>Image Url</label>
+			<input type="text" asp-for="Img" class="input" placeholder="Image Url">
+			<span asp-validation-for="Img" class="has-text-danger"></span>  
+		</div>
+	</div>
+
+	<div class="columns">
+		<div class="column">
+			<a asp-action="Index">Back To List</a>
+		</div>
+		<div class="column has-text-right" style="display: inline;">
+			<button type="submit" class="button is-success" name="save" value="save">Save Record</button>
+			<button type="submit" class="button is-danger" name="clear" value="clear">Clear Record</button>
+		</div>
+	</div>
+
+</form>

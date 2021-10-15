@@ -1,0 +1,49 @@
+﻿@model ProductModel
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="is-size-5 mb-4">Detail of Product</h1>
+
+<div>
+    <img src="@Model.Img" style="width:200px; height:200px; object-fit:fill"/>
+</div>
+<div>
+    <table>
+        <tr>
+            <td><strong>Catagory</strong>: </td>
+            <td class="ml-2 is-inline-block">@Model.ProductCategory </td>
+        </tr>
+        <tr>
+            <td><strong>Type</strong>: </td>
+            <td class="ml-2 is-inline-block">@Model.ProductType </td>
+        </tr>
+        <tr>
+            <td><strong>Product</strong>: </td>
+            <td class="ml-2 is-inline-block">@Model.ProductName </td>
+        </tr>
+          <tr>
+            <td><strong>Price</strong>: </td>
+            <td class="ml-2 is-inline-block">@Model.ProductPrice </td>
+        </tr>
+        <tr>
+            <td><strong>Volume</strong>: </td>
+            <td class="ml-2 is-inline-block">@Model.ProductVolume </td>
+        </tr>
+         <tr>
+            <td><strong>Description</strong>: </td>
+            <td class="ml-2 is-inline-block">@Model.ProductDescription </td>
+        </tr>
+         <tr>
+            <td><strong>Rating</strong>: </td>
+            <td class="ml-2 is-inline-block">@Model.Rating </td>
+        </tr>
+    </table>
+</div>
+
+<div class="mt-3">
+    <a class="button is-info" asp-route-id="@Model.Id" asp-action="Edit">Edit</a>
+    <a class="button is-danger" asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+    <a class="button" asp-action="Index">Go Back</a>
+</div>

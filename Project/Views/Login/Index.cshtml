@@ -1,0 +1,39 @@
+﻿@model LoginModel
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+<form class="box center-position has-background-white-ter" asp-action="Login" method="post">
+	<div style="width:450px; height: 300px;">
+		<div>
+			<p class="subtitle is-3">Login Account</p>
+		</div>
+
+		<div class="field mt-4">
+			<label class="label">Email</label>
+			<div class="control">
+				<input asp-for="UserName" class="input" type="email" placeholder="e.g. alex@example.com">
+				<span asp-validation-for="UserName" class="has-text-danger"></span>  
+			</div>
+		</div>
+
+		<div class="field">
+			<label class="label">Password</label>
+			<div class="control">
+				<input asp-for="Password" class="input" type="password" placeholder="********">
+				<span asp-validation-for="Password" class="has-text-danger"></span>  
+			</div>
+		</div>
+
+		<button class="button is-primary">Sign in</button>
+	</div>
+	 @if (TempData["Error"] != null)
+    {
+        <script type="text/javascript">
+            window.onload = function () {
+                alert("@TempData["Error"]");
+            };
+        </script>
+    }
+</form>
