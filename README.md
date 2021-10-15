@@ -89,6 +89,8 @@ Yayyy Now I have 2 admin accounts and 2 user accounts.
 I gave the update, delete and add commands to the admin accounts.
 This cannot be accessed through the user accounts.
 
+Also added Role-based authentication to access the MVC webpage 
+
 
 2021-10-08
 
@@ -129,10 +131,7 @@ It is Flare Eyewear.
 
 2021-10-09
 
-
---Added Role-based authentication to access the MVC webpage 
-
---Handle to deny direct URL access without login 
+1634- By following each and every step carefully given on the Microsoft's website I was able to perform these vigours tasks. Handle to deny direct URL access without login 
 
 --Added link to navigate product catalogue page and about us 
 
@@ -140,21 +139,31 @@ It is Flare Eyewear.
 
 --Added List view page for product catalog and available to access for users only.
 
---Add at least 10 product items when seeding the database .
+1811- Then I added more than 10 product items when seeding the database .
 
---using Entity framework core code first approach 
+To be honest seeding them was much more easier than I thought it would be. XP
+
+Done for the day!
+
+2021-10-10
+
+2204- While using the Entity framework core code first approach I succeded in making alot of changes 
 
 --Migeration will help to create table and seed the data as well 
 
---Added Azure deployment 
+0133 For Adding Azure deployment I even had to enter my card details so that in the future Microsoft can cut the fees of azure membership.
+
+P.s.- I really hope they don't charge me for fidling with small little things in azure. HAHAH
 
 
-
-Required Dependency to communicate with DB and enables commands for Migration:
+2021-10-12
+This was the part that ate up almost all of my time.
+After a milenia of errors and debugging 
+I had fulfilled the Requirement of Dependency to communicate with DB and enables commands for Migration:
  -- Entity framework core 
  -- Entity framework SQLite
  -- EntityFrameworkCore Tools
- 
- 
- 
- 
+
+ Annndd Finally my ASP.NET 5.0 Core Web App is ready to be submited.
+
+ I really hope you like my work. Hoping for a positive responce from your side, thanks.
